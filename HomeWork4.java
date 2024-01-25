@@ -1,17 +1,17 @@
 package HomeWork4;
 
-/**
- * AIT-TR, cohort 42.1, Java Basic, Home work   4
- *  Alexander Anischenko
- * 21. 01. 24
- */
+
 
 import java.util.Scanner;
 
+/**
+ * AIT-TR, cohort 42.1, Java Basic, Home work   #4
+ *
+ * @autor Alexander Anischenko
+ * @version 25. 01. 24
+ */
 public class HomeWork4 {
     public static void main(String[] args) {
-
-        // Task 1
         Scanner a;
         a = new Scanner(System.in);
         System.out.println("Введите ваше имя: ");
