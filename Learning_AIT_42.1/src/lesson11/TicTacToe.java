@@ -17,8 +17,8 @@ public class TicTacToe {
     static final char CHAR_EMPTY = '.';
     static final char CHAR_X = 'x';
     static final char CHAR_O = 'o';
+    
     public static void main(String[] args) {
-
         //init table (.)
         initTable();
         //main game loop
@@ -54,7 +54,7 @@ public class TicTacToe {
         printTable();
         //define winner
     }
-    
+
     static void printTable() {
         for (int y = 0; y < 3; y++){
             for (int x = 0; x < 3; x++){
