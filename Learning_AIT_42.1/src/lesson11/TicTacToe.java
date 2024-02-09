@@ -19,7 +19,6 @@ public class TicTacToe {
     static final char CHAR_O = 'o';
     public static void main(String[] args) {
 
-
         //init table (.)
         initTable();
         //main game loop
@@ -55,6 +54,7 @@ public class TicTacToe {
         printTable();
         //define winner
     }
+    
     static void printTable() {
         for (int y = 0; y < 3; y++){
             for (int x = 0; x < 3; x++){
@@ -81,6 +81,7 @@ public class TicTacToe {
             }
         }
     }
+
     static void turnAi(){
         int x, y;
         do {
@@ -89,12 +90,14 @@ public class TicTacToe {
         } while (!isCellValid(x, y));
         table[y][x] =  CHAR_O;
     }
+
     static boolean isCellValid(int x, int y) {
         if(x < 0 || y < 0 || x > 2 || y > 2) {
             return false;
         }
         return table[y][x] == CHAR_EMPTY;
     }
+
     static boolean isWin(char chr){
         // by x
         if (table[0][0] == chr && table[0][1] == chr && table[0][2] == chr) return true;
