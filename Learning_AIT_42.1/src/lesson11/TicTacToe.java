@@ -6,6 +6,7 @@ import java.util.Scanner;
 /**
  * AIT-TR, cohort 42.1, Java Basic, Lesson #11
  *
+ * 
  * @version 07. 02. 24
  */
 
@@ -17,7 +18,7 @@ public class TicTacToe {
     static final char CHAR_EMPTY = '.';
     static final char CHAR_X = 'x';
     static final char CHAR_O = 'o';
-    
+
     public static void main(String[] args) {
         //init table (.)
         initTable();
@@ -27,7 +28,7 @@ public class TicTacToe {
             turnHumane();
             // is human win? yes - game over
             if (isWin(CHAR_X)) {
-                System.out.println("YOU WON! ");
+                System.out.println("YOU WON!");
                 break;
             }
             //is table fill& yes - game over
@@ -111,7 +112,7 @@ public class TicTacToe {
         if (table[0][0] == chr && table[1][1] == chr && table[2][2] == chr) return true;
         if (table[0][2] == chr && table[1][1] == chr && table[2][0] == chr) return true;
         return false;
-        }
+    }
 
     static boolean isTableFull() {
         for (int y = 0; y < 3; y++) {
