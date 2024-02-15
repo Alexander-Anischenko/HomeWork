@@ -44,6 +44,8 @@ public class HomeWork9 {
         }
         System.out.println();
     }
+
+
     static void listArrayBack(int[] a, boolean reversDirection){
         if (reversDirection) {
            listArrayBack(a);
@@ -53,6 +55,15 @@ public class HomeWork9 {
             }
             System.out.println();
         }
+    }
+
+    public static int[] createRandomArray(int len, int bound) {
+        int[] a = new int[len];
+        Random random = new Random();
+        for (int i = 0; i < a.length; i++) {
+            a[i] = random.nextInt(bound);
+        }
+        return a;
     }
     //static int[] createRandomArray(int le);
     static double[] calculateArray(int[] a) {
