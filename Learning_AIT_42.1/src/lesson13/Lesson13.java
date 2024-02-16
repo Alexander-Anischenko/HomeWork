@@ -10,17 +10,23 @@ import lesson9.HomeWork9;
  */
 public class Lesson13 {
     public static void main(String[] args) {
-        int[] array = HomeWork9.createRandomArray(1_00_000, 100);
+        long startTime = System.currentTimeMillis();
+        int[] array = HomeWork9.createRandomArray(100_000, 100);
+        //int[] array = HomeWork9.createRandomArray(100_000_000, 100);
+        System.out.println("Array creation time: " + (System.currentTimeMillis() - startTime) + " ms");
 
-
-        long stastTime = System.currentTimeMillis();
+        startTime = System.currentTimeMillis();
         System.out.println(HomeWork12.linearSearch(array, 45));
-        System.out.println((System.currentTimeMillis() - stastTime) + "ms");
+        HomeWork12.linearSearch(array, 45);
+        System.out.println("Linear search time: " + (System.currentTimeMillis() - startTime) + " ms");
 
+        startTime = System.currentTimeMillis();
         HomeWork12.selectionSort(array);
+        System.out.println("Selection sort time: " + (System.currentTimeMillis() - startTime) + " ms");
 
-        stastTime = System.currentTimeMillis();
+        startTime = System.currentTimeMillis();
         System.out.println(HomeWork12.binarySearch(array, 45));
-        System.out.println((System.currentTimeMillis() - stastTime) + "ms");
+        HomeWork12.binarySearch(array, 45);
+        System.out.println((System.currentTimeMillis() - startTime) + "ms");
     }
 }
