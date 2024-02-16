@@ -8,7 +8,7 @@ package lesson15;
 public class Lesson15 {
     public static void main(String[] args) {
         Cat cat = new Cat();//"Mursik", "white", 3);
-        System.out.println("Cat: " + cat.name + ", " + cat.color + ", "  + cat.age);
+        System.out.println("Cat 0: " + cat.name + ", " + cat.color + ", "  + cat.age);
         cat.voice();
 
         Cat cat1 = new Cat("Barsik", "black", 5 , 10);
