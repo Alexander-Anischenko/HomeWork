@@ -1,5 +1,8 @@
 package lesson13;
 
+import lesson12.HomeWork12;
+import lesson9.HomeWork9;
+
 import java.util.Arrays;
 
 /**
@@ -11,49 +14,23 @@ import java.util.Arrays;
 
 public class HomeWork13 {
     public static void main(String[] args) {
-        int[] array = {5, 9, -14, 7, -4, 2};
-        int toSearch = -4;
-        int idx = -1;
-        for (int i = 0; i < array.length; i++) {
-            if (array[i] == toSearch) {
-                idx = i;
-                break;
-            }
-        }
-        System.out.println(idx);
-        selectionSort(array);
-        System.out.println(Arrays.toString(array));
+        long startTime = System.currentTimeMillis();
+        int[] array = HomeWork9.createRandomArray(100_000, 100);
+        //int[] array = HomeWork9.createRandomArray(100_000_000, 100);
+        System.out.println("Array creation time: " + (System.currentTimeMillis() - startTime) + " ms");
 
-    }
-    static void addOne(int n) {
-        n++;
-        System.out.println("N = " + n);
-    }
-    static void exchangeSort(int[] a) {
-        for (int i = 0; i < a.length - 1; i++) {
-            for (int j = i + 1; j < a.length; j++) {
-                if (a[i] > a[j]) {
-                    int tmp = a[i];
-                    a[i] = a[j];
-                    a[j] = tmp;
-                }
-            }
-        }
-    }
-    static void selectionSort(int[] a) {
-        for (int i = 0; i < a.length - 1; i++) {
-            int min = a[i + 1];
-            int minIdx = i + 1;
-            for (int j = i + 1; j < a.length; j++) {
-                if (a[j] < min) {
-                    min = a[j];
-                    minIdx = j;
-                }
-            }
-            if (a[i] > min) {
-                a[minIdx] = a[i];
-                a[i] = min;
-            }
-        }
+        startTime = System.currentTimeMillis();
+        System.out.println(HomeWork12.linearSearch(array, 45));
+        HomeWork12.linearSearch(array, 45);
+        System.out.println("Linear search time: " + (System.currentTimeMillis() - startTime) + " ms");
+
+        startTime = System.currentTimeMillis();
+        HomeWork12.selectionSort(array);
+        System.out.println("Selection sort time: " + (System.currentTimeMillis() - startTime) + " ms");
+
+        startTime = System.currentTimeMillis();
+        System.out.println(HomeWork12.binarySearch(array, 45));
+        HomeWork12.binarySearch(array, 45);
+        System.out.println((System.currentTimeMillis() - startTime) + "ms");
     }
 }
