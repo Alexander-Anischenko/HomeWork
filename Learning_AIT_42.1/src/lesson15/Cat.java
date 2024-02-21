@@ -3,13 +3,16 @@ package lesson15;
 public class Cat {
     String name;
     String color;
+
+    String eyeColor;
     int age;
     int volume;
     int food;
 
-    public Cat(String name, String color, int age, int volume) {
+    public Cat(String name, String color, String eyeColor, int age, int volume) {
         this.name = name;
         this.color = color;
+        this.eyeColor = eyeColor;
         this.age = age;
         this.volume = volume;
 
