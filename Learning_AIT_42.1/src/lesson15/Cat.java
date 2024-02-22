@@ -1,15 +1,15 @@
 package lesson15;
 
 public class Cat {
-    String name;
-    String color;
+    String name; // Field (Поля)
+    String color; // Field (Поля)
+    String eyeColor ; // Field (Поля)
+    int age; // Field (Поля)
+    int volume; // Field (Поля)
+    int food; // Field (Поля)
+    int energie;
 
-    String eyeColor;
-    int age;
-    int volume;
-    int food;
-
-    public Cat(String name, String color, String eyeColor, int age, int volume) {
+    public Cat(String name, String color, String eyeColor, int age, int volume) {  //В скобках () переменные Variables
         this.name = name;
         this.color = color;
         this.eyeColor = eyeColor;
@@ -18,15 +18,16 @@ public class Cat {
 
     }
 
-    public Cat() {
+    public Cat() { // Перегрузка конструктора(второй конструктор с таким-же именем)
     }
+
     public void eat(int food) {
         this.food = food;
 
     }
 
     public double satiated() {
-        return (double) food / volume * 100;
+        return (double) food / volume * 100; // Первая операция кастомизируется в double, чтобы дальше метод насыщение(satiated) в методе main считался в процентах
     }
 
     public void voice() {
