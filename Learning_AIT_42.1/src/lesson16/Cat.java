@@ -2,9 +2,9 @@ package lesson16;
 
 public class Cat {
 
-    int maxVolume;
+    public int maxVolume;
 
-    int realVolume;
+    public int realVolume;
 
     public Cat(int maxVolume) {
         this.maxVolume = maxVolume;

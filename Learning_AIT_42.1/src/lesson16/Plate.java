@@ -4,7 +4,7 @@ public class Plate {
 
     int capacity;
 
-    int food;
+    public int food;
 
     public Plate(int capacity) {
         this.capacity = capacity;
