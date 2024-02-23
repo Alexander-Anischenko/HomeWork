@@ -12,9 +12,11 @@ public class Plate {
     }
 
     public void add(int food){
-        //TODO check capacity
+        if ( this.food + food > capacity){
+            this.food = capacity;
+            return;
+        }
         this.food += food;
-
     }
 
     public  int amountFood() {
