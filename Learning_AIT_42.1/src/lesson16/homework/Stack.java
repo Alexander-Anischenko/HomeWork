@@ -6,7 +6,7 @@ import java.util.Arrays;
  * AIT-TR, cohort 42.1, Java Basic, Home work   #16
  *
  * @autor Alexander Anischenko
- * @version 14-02-24
+ * @version 23-02-24
  */
 
 public class Stack {

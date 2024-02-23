@@ -18,7 +18,7 @@ public class Lesson16 {
         cat.eat(plate);
         //plate.feeding(plate.amountFood());
 
-        System.out.println("Cat: " + cat.realVolume);
-        System.out.println("Plate: " + plate.food);
+        System.out.println("Cat eat: " + cat.realVolume);
+        System.out.println("Plate residue: " + plate.food);
     }
 }
