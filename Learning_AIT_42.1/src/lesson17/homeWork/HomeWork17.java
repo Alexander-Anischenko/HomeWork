@@ -16,7 +16,7 @@ public class HomeWork17 {
                 new Emloyee("a5", "b5", "c5", 789, 1250,50)
         };
         for (Emloyee emloyee: emloyees) {
-            if (emloyee.getAge()>40) {
+            if (emloyee.getAge() > 40) {
                 System.out.println(emloyee.getAge() + ", " +
                         emloyee.getPosition() + ", " +
                         emloyee.getEmail() + ", " +
