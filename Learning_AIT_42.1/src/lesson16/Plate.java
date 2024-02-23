@@ -14,7 +14,7 @@ public class Plate {
     public void add(int food){
         if ( this.food + food > capacity){
             this.food = capacity;
-            return;
+            return; 
         }
         this.food += food;
     }
