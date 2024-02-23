@@ -13,7 +13,7 @@ public class Lesson16 {
         System.out.println("Cat: " + cat.realVolume);
         System.out.println("Plate: " + plate.food);
 
-        plate.add(25);
+        plate.add(70);
         System.out.println("Plate filling: " + plate.food);
         cat.eat(plate);
         //plate.feeding(plate.amountFood());

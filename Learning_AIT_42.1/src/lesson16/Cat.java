@@ -17,7 +17,7 @@ public class Cat {
             food = maxVolume - realVolume;
         }
         realVolume += food;
-        plate.decreaseFood(food);
+        plate.feeding(food);
 
     }
  }
