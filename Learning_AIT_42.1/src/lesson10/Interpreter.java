@@ -37,6 +37,10 @@ public class Interpreter {
         String[] tokens = line.split("=");
         String varName = tokens[0].trim();
         String varValue = tokens[1].trim();
+        // check variable name lenght
+        if(validateVarName(varName)) {
+            return;
+        }
         // transform 'a' -> 0
         int idx = varName.charAt(0) - 'a';
         // transform "123" -> 123
@@ -46,7 +50,22 @@ public class Interpreter {
     }
 
     static void printValue(String varName) {
+        if(validateVarName(varName)) {
+            return;
+        }
         int idx = varName.charAt(0) - 'a';
         System.out.println(values[idx]);
+    }
+
+    static boolean validateVarName(String varName) {
+        if(varName.length() > 1) {
+            System.out.println("Error, variable name  is too long");
+            return false;
+        }
+        if (varName.isEmpty()) {
+            System.out.println("Error, variable name  is empty");
+            return false;
+        }
+        return true;
     }
 }
