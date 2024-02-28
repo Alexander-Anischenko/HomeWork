@@ -66,6 +66,10 @@ public class Interpreter {
             System.out.println("Error, variable name  is empty");
             return false;
         }
+        int idx = varName.charAt(0) - 'a';
+        if (idx < 0 || idx > values.length - 1) {
+            System.out.println("Error: variable name is invalid");
+        }
         return true;
     }
 }
