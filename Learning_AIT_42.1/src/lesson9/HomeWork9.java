@@ -12,9 +12,6 @@ import java.util.Random;
 
 public class HomeWork9 {
 
-
-
-
     public static void main(String[] args) {
         int[] array = {1, 2, 3, 4, 5, 6};
 
@@ -48,7 +45,7 @@ public class HomeWork9 {
 
     static void listArrayBack(int[] a, boolean reversDirection){
         if (reversDirection) {
-           listArrayBack(a);
+            listArrayBack(a);
         }else {
             for (int i : a) {
                 System.out.print(i + " ");
