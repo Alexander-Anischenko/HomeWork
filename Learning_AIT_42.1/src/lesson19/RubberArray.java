@@ -37,40 +37,40 @@ public class RubberArray {
     }
 
     public void add(int value) {
+    extendArrayIfNeed();
+        data[length] = value;
+        length++;
+    }
+
+    public void add(int value, int idx) {
         extendArrayIfNeed();
-            data[length] = value;
-            length++;
+        for (int i = length; i > idx; i--) {
+            data[i] = data[i - 1];
+
         }
+        data[idx] = value;
+        length++;
+    }
 
-        public void add(int value, int idx) {
-            extendArrayIfNeed();
-            for (int i = length; i > idx; i--) {
-                data[i] = data[i - 1];
+    public void remove(int idx) {
+        for (int i = idx; i < data.length -1; i++) {
+            data[i] = data[i + 1];
+        }
+        length--;
+    }
 
+    public boolean contains(int value) {
+        return indexOf(value) != -1;
+    }
+
+    public int indexOf(int value) {
+        for (int i = 0; i < length; i++) {
+            if (data[i] == value) {
+                return i;
             }
-            data[idx] = value;
-            length++;
         }
-
-        public void remove(int idx) {
-            for (int i = idx; i < data.length -1; i++) {
-                data[i] = data[i + 1];
-            }
-            length--;
-        }
-
-        public boolean contains(int value) {
-            return indexOf(value) != -1;
-        }
-
-        public int indexOf(int value) {
-            for (int i = 0; i < length; i++) {
-                if (data[i] == value) {
-                    return i;
-                }
-            }
-            return -1;
-        }
+        return -1;
+    }
 
     @Override
     public String toString() {
