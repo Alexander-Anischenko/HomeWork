@@ -17,5 +17,10 @@ public class Lesson19 {
         System.out.println(ra.get(2));
         ra.remove(2);
         System.out.println(ra);
+        System.out.println(ra.contains(12));
+        System.out.println(ra.indexOf(12));
+        System.out.println(ra.indexOf(8));
+        ra.add(-3, 3);
+        System.out.println(ra);
     }
 }

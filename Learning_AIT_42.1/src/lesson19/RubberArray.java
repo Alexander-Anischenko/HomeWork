@@ -1,5 +1,12 @@
 package lesson19;
 
+/**
+ * AIT-TR, cohort 42.1, Java Basic, Home work   #19
+ *
+ * @autor Alexander Anischenko
+ * @version 28-02-24
+ */
+
 public class RubberArray {
 
     private final int INIT_DATA_SIZE = 10;
@@ -18,7 +25,7 @@ public class RubberArray {
         return data[idx];
     }
 
-    public void add(int value) {
+    private void extendArrayIfNeed() {
         if (length == data.length) {
 
             int[] neuData = new int[(int) (data.length * RESIZE_KOEF)];
@@ -27,12 +34,22 @@ public class RubberArray {
             }
             data = neuData;
         }
+    }
+
+    public void add(int value) {
+        extendArrayIfNeed();
             data[length] = value;
             length++;
         }
 
-        public void add(int vaiue, int idx) {
-            //TODO implement
+        public void add(int value, int idx) {
+            extendArrayIfNeed();
+            for (int i = length; i > idx; i--) {
+                data[i] = data[i - 1];
+
+            }
+            data[idx] = value;
+            length++;
         }
 
         public void remove(int idx) {
@@ -42,16 +59,28 @@ public class RubberArray {
             length--;
         }
 
+        public boolean contains(int value) {
+            return indexOf(value) != -1;
+        }
+
+        public int indexOf(int value) {
+            for (int i = 0; i < length; i++) {
+                if (data[i] == value) {
+                    return i;
+                }
+            }
+            return -1;
+        }
+
     @Override
     public String toString() {
-        //TODO use StringBuilder instead of Sting
-        String str = "[";
+        StringBuilder sb = new StringBuilder("[");
         for (int i = 0; i < length; i++) {
-           str += String.valueOf(data[i]);
+           sb.append ((data[i]));
            if (i <length -1) {
-               str += ", ";
+               sb.append(", ");
            }
         }
-        return str + "]";
+        return sb.append("]").toString();
     }
 }
