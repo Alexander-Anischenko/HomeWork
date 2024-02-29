@@ -14,12 +14,14 @@ public class Lesson19 {
         ra.add(-7);
         ra.add(25);
         System.out.println(ra);
-        System.out.println(ra.get(2));
+        System.out.println("Getting index value: " + ra.getValue(2));
+        System.out.println("Remove index.");
         ra.remove(2);
         System.out.println(ra);
-        System.out.println(ra.contains(12));
+        System.out.println("Value content check: " + ra.contains(12));
         System.out.println(ra.indexOf(12));
         System.out.println(ra.indexOf(8));
+        System.out.println("Add value to a specified index location.");
         ra.add(-3, 3);
         System.out.println(ra);
     }
